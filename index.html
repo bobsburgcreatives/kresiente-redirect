@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5; url=https://clean-antimony-7c4.notion.site/1d021772542b800ebb84e685a4e580c2?v=1d021772542b80ffac60000c27dd031e&pvs=4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            font-size: 16px;
             margin: 0;
             padding: 0;
             display: flex;
@@ -37,10 +36,24 @@
 </head>
 <body>
     <div class="container">
-        <img src="loadingani.gif" alt="Loading Animation" class="animation" onclick="window.location.href='https://clean-antimony-7c4.notion.site/1d021772542b800ebb84e685a4e580c2?v=1d021772542b80ffac60000c27dd031e&pvs=4'">
+        <img src="loadingani.gif" alt="Loading Animation" class="animation" id="redirectAnimation">
         <div class="message">
             If you are not redirected, <br> click the animation to go manually.
         </div>
     </div>
+
+    <script>
+        // Delay the redirect to avoid showing the URL
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = 'https://clean-antimony-7c4.notion.site/1d021772542b800ebb84e685a4e580c2?v=1d021772542b80ffac60000c27dd031e&pvs=4';
+            }, 5000);  // Redirect after 5 seconds
+        };
+
+        // Allow the image to manually trigger the redirect if clicked
+        document.getElementById('redirectAnimation').onclick = function() {
+            window.location.href = 'https://clean-antimony-7c4.notion.site/1d021772542b800ebb84e685a4e580c2?v=1d021772542b80ffac60000c27dd031e&pvs=4';
+        };
+    </script>
 </body>
 </html>
